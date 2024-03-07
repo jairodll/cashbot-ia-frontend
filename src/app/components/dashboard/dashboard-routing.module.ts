@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { InicioComponent } from './inicio/inicio.component';
 import {SettigsComponent} from './settigs/settigs.component';
+import {ChatbotComponent} from './chatbot/chatbot.component';
 
 const routes: Routes = [
     { path: '', component: DashboardComponent, children: [
       { path: '', component: InicioComponent },
-      { path: 'settigs', component: SettigsComponent }
+      { path: 'chatbot', component: ChatbotComponent },
+      { path: 'settigs', component: SettigsComponent },
     ]
   },
 

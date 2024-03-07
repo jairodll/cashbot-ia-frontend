@@ -7,19 +7,26 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SharedModule } from '../shared/shared.module';
 import {SettigsComponent} from './settigs/settigs.component';
-
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import { ChatbotComponent } from './chatbot/chatbot.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     InicioComponent,
     NavbarComponent,
-    SettigsComponent
+    SettigsComponent,
+    ChatbotComponent
   ],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule,
-    SharedModule
-  ]
+    imports: [
+        CommonModule,
+        DashboardRoutingModule,
+        SharedModule,
+        MatDividerModule,
+        MatListModule,
+        FormsModule
+    ]
 })
 export class DashboardModule { }
