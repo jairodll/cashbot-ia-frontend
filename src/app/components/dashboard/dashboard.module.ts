@@ -10,7 +10,10 @@ import {SettigsComponent} from './settigs/settigs.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { ChatbotComponent } from './chatbot/chatbot.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
+import {MatOptionModule} from '@angular/material/core';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,11 @@ import {FormsModule} from '@angular/forms';
         SharedModule,
         MatDividerModule,
         MatListModule,
-        FormsModule
+        FormsModule,
+        MatSelectModule,
+        MatOptionModule,
+        MatButtonModule,
+        ReactiveFormsModule
     ]
 })
 export class DashboardModule { }
