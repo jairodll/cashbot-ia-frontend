@@ -1,5 +1,22 @@
 <div class="container">
   <mat-toolbar>
-    <span>Settigs</span>
+    <span>Límite de gastos</span>
   </mat-toolbar>
+    <br>
+    <p>Ingrese el total de límite</p>
+    <form [formGroup]="form">
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Tipo de límite</mat-label>
+            <mat-select formControlName="tipoLimite"
+                        >
+                <mat-option *ngFor="let limite of catalogo_limites" [value]="limite">
+                    {{limite.descripcion_catalogo}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-button>
+            <mat-icon>save</mat-icon>
+            Guardar
+        </button>
+    </form>
 </div>
